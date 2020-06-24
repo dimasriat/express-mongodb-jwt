@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Welcome</title>
+	</head>
+	<body>
+		<h1>Read Data</h1>
+		<% if (results) { %>
+			<ul>
+			<% for (result of results) { %>
+				<li>
+					<%= JSON.stringify(result) %>
+					<br/>
+					<a href="/delete/<%=result._id%>">delete</a>
+				</li>	
+			<% }; %>
+			</ul>
+		<% }; %>
+	</body>
+</html>
